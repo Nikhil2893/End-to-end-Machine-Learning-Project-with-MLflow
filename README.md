@@ -100,6 +100,19 @@ export MLFLOW_TRACKING_PASSWORD=ff53be44bc1a7eb176f12bbfb8cee04567631847
 
 	1. Build docker image of the source code
 
+# Make Dockerfile with below code for containerization
+
+FROM python:3.8-slim-buster
+
+RUN apt update -y && apt install awscli -y
+WORKDIR /app
+
+COPY . /app
+RUN pip install -r requirements.txt
+
+CMD ["python3", "app.py"]
+
+
 	2. Push your docker image to ECR
 
 	3. Launch Your EC2 
