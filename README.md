@@ -11,6 +11,7 @@
 6. Update the components
 7. Update the pipeline 
 8. Update the main.py
+#updat dvc.yaml  -------------------------------- Not incorporating in this project
 9. Update the app.py
 
 
